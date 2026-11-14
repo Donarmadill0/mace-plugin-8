@@ -1,0 +1,22 @@
+# Plutus Mace V3
+# Everything is the same as V2, but the config.yml is now correctly bundled in the JAR.
+resource-pack:
+  enabled: true
+  port: 19133
+dash:
+  cooldown-seconds: 10
+  forward-impulse: 1.8
+  upward-impulse: 0.25
+  damage-radius: 4.0
+  damage-amount: 3.0
+  sound-pitch: 0.8
+pact:
+  cooldown-seconds: 25
+  duration-seconds: 10
+  link-radius: 15.0
+  max-targets: 3
+sounds:
+  dash: "ENTITY_WITHER_SHOOT"
+  pact-cast: "ENTITY_WITHER_AMBIENT"
+  pact-link: "BLOCK_CHAIN_PLACE"
+  toll-trigger: "ENTITY_PLAYER_HURT_SWEET_BERRY_BUSH"

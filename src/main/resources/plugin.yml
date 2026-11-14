@@ -1,0 +1,10 @@
+name: PlutusMace
+version: '3.0.0'
+main: com.plutus.PlutusMacePluginV3
+api-version: '1.21'
+commands:
+  giveplutus:
+    permission: plutus.admin
+permissions:
+  plutus.admin:
+    default: op

@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+group = 'com.plutus'
+version = '3.0.0'
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+}
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+}
+processResources {
+    // This is the crucial part that ensures config.yml is bundled
+    from('src/main/resources') {
+        include 'config.yml'
+    }
+}
