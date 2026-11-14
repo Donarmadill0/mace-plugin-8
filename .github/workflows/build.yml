@@ -1,17 +1,21 @@
  name: build-plugin
-  on: [push, pull_request]
+  on:
+    push:
+    pull_request:
   jobs:
     build:
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with: {java-version: '21', distribution: 'temurin'}
-      - name: Build with Gradle
-        run: gradle build
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: PlutusMace
-          path: build/libs/*.ja
+        - uses: actions/checkout@v4
+        - name: Set up JDK 21
+          uses: actions/setup-java@v4
+          with:
+            java-version: '21'
+            distribution: 'temurin'
+        - name: Build with Gradle
+          run: gradle build
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: PlutusMace
+            path: build/libs/*.jar
